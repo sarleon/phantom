@@ -1,3 +1,4 @@
+
 import optparse
 
 def main():
@@ -11,7 +12,7 @@ def main():
     option_parser.add_option('-e','--email',dest='email',action='store')
     option_parser.add_option('-c','--cellphone',dest='cellphone',action='store')
     option_parser.add_option('-t','--thread',dest='thread',action='store',default=10)
-    option_parser.add_option('-f','--file',dest='file',action='store')
+
     email = option_parser.get_option('email')
     cellphone = option_parser.get_option('cellphone')
 
