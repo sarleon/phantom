@@ -17,8 +17,7 @@ def main():
     email = option_parser.get_option('email')
     cellphone = option_parser.get_option('cellphone')
 
-    if not email^cellphone:
-        option_parser.error('please use -c OR -e OR -f')
+
 
 
 if __name__ == '__main__':
