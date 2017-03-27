@@ -15,10 +15,12 @@ class Spider:
         self.tasklist=taskList
 
 
+
     """
     central method to control the task
     """
     def controller(self):
+        self.result_list={}
         for task in self.tasklist:
             pass
 

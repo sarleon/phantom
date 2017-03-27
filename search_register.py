@@ -1,3 +1,4 @@
+from core.spider import Spider
 
 import optparse
 
