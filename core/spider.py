@@ -11,8 +11,11 @@ class Spider:
     """
     struct
     """
-    def __init__(self,taskList):
+    def __init__(self,taskList,target,query_method):
+        self.query_method=query_method
         self.tasklist=taskList
+        self.target=target
+
 
 
 
@@ -21,14 +24,14 @@ class Spider:
     """
     def controller(self):
         self.result_list={}
-        for task in self.tasklist:
-            pass
+        if self.query_method=='email':
+            for task in  self.tasklist:
+                pass
 
 
-
-
-
-
+        else:
+            for task in self.tasklist:
+                pass
 
     """
     method to crap the webpage or the httpapi
