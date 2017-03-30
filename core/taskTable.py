@@ -6,9 +6,15 @@ import os
 class Tasktable:
 
     def __init__(self,email_or_cellphone):
-        file_path = os.path.abspath('.') + '/lib/tasks.json'
-        json_data = json.loads(file_path)
 
+        """
+        open json file and
+        :param email_or_cellphone:
+        """
+        file_path = os.path.abspath('.') + '/config/websites.json'
+
+        with open(file_path,'r') as f:
+            json_data = json.load(f)
         if email_or_cellphone == 'email':
             task_list = json_data['email_table']
         else:

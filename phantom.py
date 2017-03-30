@@ -1,10 +1,16 @@
 from core.spider import Spider
 from core.taskTable import Tasktable
 from core.Logger import Logger
+from core.util import banner
 import optparse
+
 from pprint import pprint
 
 def main():
+
+    banner()
+
+
     '''
     command line option parser
     '''
@@ -16,8 +22,8 @@ def main():
         search_register.py -e [email] [options]
         search_register.py -c [cellphone] [options]"""
 
-    option_parser.add_option('-e', '--email', dest='email', action='store')
-    option_parser.add_option('-c', '--cellphone', dest='cellphone', action='store')
+    option_parser.add_option('-e', '--email', dest='email', action='store',default=None)
+    option_parser.add_option('-c', '--cellphone', dest='cellphone', action='store',default=None)
     option_parser.add_option('-t', '--thread', dest='thread', action='store', default=1,help="")
 
     """
@@ -33,8 +39,8 @@ def main():
     """
     specific the search type (email or cellphone)
     """
-    email = options.values.get('email')
-    cellphone = options.values.get('cellphone')
+    email = options.email
+    cellphone = options.cellphone
 
 
 
@@ -54,7 +60,7 @@ def main():
 
     logger.info("search websites registered using "+query_method
                 +":"+target)
-    spider = Spider(task_list,target,)
+    spider = Spider(task_list,target,query_method)
 
 if __name__ == '__main__':
     main()
