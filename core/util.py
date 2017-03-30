@@ -21,6 +21,10 @@ def banner():
 ..:::::::::::::::::::::::::::::::::::::::::::::
     ""","red")
 
+
+
+
+
 """
 get current complete format time
 """

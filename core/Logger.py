@@ -17,24 +17,24 @@ class Logger:
 
 
     def fatal(self,log_info):
-        if self.log_level>-1:
+        if self.log_level>3:
             self.__log("[FATAL] " + get_current_time() + " "+log_info)
 
 
     def error(self,log_info):
-        if self.log_level>-1:
+        if self.log_level>2:
             self.__log("[ERROR] " + get_current_time() + " "+log_info)
 
 
 
     def warning(self,log_info):
-        if self.log_level>-1:
+        if self.log_level>1:
             self.__log("[WARNING] " + get_current_time() + " "+log_info)
 
 
 
     def debug(self,log_info):
-        if self.log_level>-1:
+        if self.log_level>0:
             self.__log("[DEBUG] " + get_current_time() + " "+log_info)
 
 
