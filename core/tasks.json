@@ -1,3 +1,6 @@
+
+
+
 {
   "email_table":
     [
@@ -11,11 +14,7 @@
         "data_schema":""
       }
 
-    ,
-      {
 
-
-      }
 
     ],
   "cellphone_table":[
@@ -29,11 +28,7 @@
       "data_schema":""
     }
 
-    ,
-      {
 
-
-      }
 
 
   ]
