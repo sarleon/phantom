@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-
+import threading
 class Spider:
 
     method_map={
@@ -24,6 +24,7 @@ class Spider:
     """
     def controller(self):
         self.result_list={}
+
         if self.query_method=='email':
             for task in  self.tasklist:
                 pass
