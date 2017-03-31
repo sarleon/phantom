@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import threading
+
+
 class Spider:
 
     method_map={
