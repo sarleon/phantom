@@ -2,10 +2,11 @@
 from sys import stdout
 from util import get_current_time
 from termcolor import colored
-
+from util import singleton
 """
 logger to output infomation
 """
+@singleton
 class Logger:
     log_level_map=['FATAL','ERROR','WARNING','DEBUG','INFO']
     def __init__(self,log_level):
@@ -15,6 +16,8 @@ class Logger:
     def __log(self, content):
         print content
 
+    def output(self,log_info):
+        self.__log(log_info)
 
     def fatal(self,log_info):
         if self.log_level>3:

@@ -30,3 +30,14 @@ get current complete format time
 """
 def get_current_time():
     return strftime("%Y-%m-%d %H:%M:%S", gmtime())
+
+"""
+singleton
+"""
+def singleton(class_):
+  instances = {}
+  def getinstance(*args, **kwargs):
+    if class_ not in instances:
+        instances[class_] = class_(*args, **kwargs)
+    return instances[class_]
+  return getinstance
