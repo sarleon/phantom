@@ -61,6 +61,7 @@ def main():
     logger.info("search websites registered using "+query_method
                 +":"+target)
     spider = Spider(task_list,target,query_method)
+    spider.controller()
 
 if __name__ == '__main__':
     main()

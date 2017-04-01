@@ -37,7 +37,7 @@ class Spider:
         #cellhone
         else:
             for task in self.tasklist:
-                result=self.crap(task.url,self.query_method,task.registered_string)
+                result=self.crap(task.url,self.query_method,task.registered_string,task.data_schema)
 
 
 
