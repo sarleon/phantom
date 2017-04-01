@@ -45,12 +45,12 @@ def main():
 
 
     if email:
-        task_list = Tasktable('email')
+        task_list = Tasktable('email').tasklist
         target = email
         query_method = "email"
     else:
         if cellphone:
-            task_list = Tasktable('cellphone')
+            task_list = Tasktable('cellphone').tasklist
             target = cellphone
             query_method = "cellphone"
         else:
@@ -60,7 +60,9 @@ def main():
 
     logger.info("search websites registered using "+query_method
                 +":"+target)
-    spider = Spider(task_list,target,query_method)
+
+
+    spider = Spider(task_list,target,query_method,logger)
     spider.controller()
 
 if __name__ == '__main__':

@@ -14,7 +14,7 @@ class Tasktable:
         file_path = os.path.abspath('.') + '/config/websites.json'
 
         with open(file_path,'r') as f:
-            json_data = json.load(f)
+            json_data = json.load(f,encoding='utf-8')
         if email_or_cellphone == 'email':
             task_list = json_data['email_table']
         else:
