@@ -11,6 +11,9 @@
         "registered_string":"Email is invalid or already taken",
         "data_schema":{
 
+        },
+        "headers":{
+
         }
       }
 
@@ -25,7 +28,10 @@
       "url":"http://weibo.com/signup/v5/formcheck",
       "method":"get",
       "registered_string":"600001",
-      "data_schema":{"type":"mobilesea","zone":"0086","value":"$1","from":"","__rnd":"1490940628717"}
+      "data_schema":{"type":"mobilesea","zone":"0086","value":"$1","from":"","__rnd":"1490940628717"},
+      "headers":{
+
+      }
     }
 
 

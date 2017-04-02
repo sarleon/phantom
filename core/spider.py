@@ -41,14 +41,17 @@ class Spider:
         else:
             for task in self.tasklist:
                 pprint(task)
-                result=self.crap(self.target,task.url,self.query_method,task.registered_string,task.data_schema)
+                result=self.crap(self.target,task['url'],task['method'],task['registered_string'],task['data_schema'])
 
-
+                print result
 
     """
     method to crap the webpage or the httpapi
     """
     def crap(self,target,url,method,registered_string,data):
+
+
+
         httprequest=method_map[method]
 
         # 把占位符换成目标的字符串
