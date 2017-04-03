@@ -41,14 +41,14 @@ class Spider:
         else:
             for task in self.tasklist:
                 pprint(task)
-                result=self.crap(self.target,task['url'],task['method'],task['registered_string'],task['data_schema'])
+                result=self.crap(self.target,task['url'],task['method'],task['registered_string'],task['data_schema'],task['headers'])
 
                 print result
 
     """
     method to crap the webpage or the httpapi
     """
-    def crap(self,target,url,method,registered_string,data):
+    def crap(self,target,url,method,registered_string,data,headers):
 
 
 
