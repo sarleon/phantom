@@ -31,15 +31,7 @@ class Spider:
     def controller(self):
         self.result_list={}
 
-        #email
-        if self.query_method=='email':
-            for task in  self.tasklist:
-                pass
-
-
-        #cellhone
-        else:
-            for task in self.tasklist:
+        for task in self.tasklist:
                 pprint(task)
                 result=self.crap(self.target,task['url'],task['method'],task['registered_string'],task['data_schema'],task['headers'])
 
